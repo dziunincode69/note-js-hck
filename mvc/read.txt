@@ -19,9 +19,14 @@
 
 
 
+** Logic **
+- App -> Controller -> Model -> Controller
+
+- App -> Controller -> View
 
 
 
 ** NOTE **
+- Jika require file lain maka nama variable awal harus kapital contoh: "Controller"
 - Jika ingin require ke tempat lain taro di atas Class
 - Require dalam controller ke models dan views

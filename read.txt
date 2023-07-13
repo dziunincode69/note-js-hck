@@ -6,6 +6,15 @@
 - Jika membuat class harus di module.exports agar bisa di pakai di file lain
 - 
 
+
+
+- Pastikan semua 
+
 - row > baris ke bawah 
 - col > ke samping
 - Slice me return array
+
+
+
+src link
+
