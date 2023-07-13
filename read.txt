@@ -4,16 +4,15 @@
 * OTHER NOTES *
 - module.exports
 - Jika membuat class harus di module.exports agar bisa di pakai di file lain
-- 
 
 
-
-- Pastikan semua 
 
 - row > baris ke bawah 
 - col > ke samping
 - Slice me return array
 
+- fs adalah module untuk read file biasa menggunakan readFileSync 
+- Jangan lupa menentukan encoding jika menggunakan readFileSync cth: "UTF-8"
 
 
 src link
