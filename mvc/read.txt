@@ -29,16 +29,7 @@
 - Jika ingin require ke tempat lain taro di atas Class
 - Require dalam controller ke models dan views
 - buat class baru jika ada kebutuhan lain selain class Model ( Tetapi buat di dalam file model.js) cth: EXAMPLECODE #1
-
-
-
-
-
-
-
-
-
-
+- kita bisa memanggil static pada class yang sama dengan menggunakan namaclass.namastatic cth: EXAMPLECODE #2
 
 
 

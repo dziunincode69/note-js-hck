@@ -20,3 +20,23 @@ class Model{
         return res
     }
 }
+
+
+EXAMPLECODE #2:
+class Model{
+    static list(){
+        let read = fs.readFileSync("./data/data.json", "utf-8")
+        read = JSON.parse(read)
+        let res = []
+        read.forEach(element => {
+            res.push(new Pokemon(element["id"], element["name"], element["height"], element["weight"]))
+        });
+        return res
+    }
+    static add(name,height,weight){
+        let data = Model.list()
+        console.log(data)
+    }
+}
+
+

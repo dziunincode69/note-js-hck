@@ -13,7 +13,7 @@
 
 - fs adalah module untuk read file biasa menggunakan readFileSync 
 - Jangan lupa menentukan encoding jika menggunakan readFileSync cth: "UTF-8"
-
+- Save file dengan fs writeFileSync
 
 src link
 
