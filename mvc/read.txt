@@ -1,0 +1,27 @@
+	=+  MVC  +=
+
+* Model
+- Model yang berhubungan antara aplikasi dengan Data 
+
+* View
+- Semua yang berhubungan dengan tampilan
+
+* Controller
+- Jembatan antar model dengan view
+
+
+
+- Buat Folder controllers,models,view
+- Buat File controller,model,view
+- Hubungkan file utama ke controller
+- Hubungkan controller ke model
+- Hubungan controller ke view
+
+
+
+
+
+
+** NOTE **
+- Jika ingin require ke tempat lain taro di atas Class
+- Require dalam controller ke models dan views
