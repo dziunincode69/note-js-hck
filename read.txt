@@ -5,6 +5,8 @@
 - module.exports
 - Jika membuat class harus di module.exports agar bisa di pakai di file lain
 
+- Jika ingin merubah konten dalam array dengan map kita tidak perlu push ke temp tetapi kita hanya perlu me return
+- 
 
 
 - row > baris ke bawah 

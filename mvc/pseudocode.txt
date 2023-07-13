@@ -1,0 +1,20 @@
+EXAMPLECODE #1: 
+- Buat Class Pokemon
+    constructor dengan param id,name,height,weight
+        buat variable this.namaParam contoh this.name
+
+- Buat Class Model 
+    - statis list dengan parameter filename
+    - Read file filename dengan fs lalu di parse
+    - buat variable res dengan tipe data array
+    - lalu foreach hasil parse data tadi dan setiap loop push ke variable res dengan cara push(new NamaClass(parameter nya))
+    - lalu return variable res
+
+EXAMPLECODE #2:
+- Buat Class Model
+        - statis list tanpa parameter
+        - read file dengan fs
+        - buat variable res
+    - statis add dengan parameter nama,tinggi,berat
+    - Buat variable dengan isi dari statis lain contoh Model.list
+    - DISPLAY
