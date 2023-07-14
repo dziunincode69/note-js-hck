@@ -33,4 +33,7 @@
 
 
 ** CALLBACK **
-- parameter cb / callback pada sebuah function / static adalah return jai
+- parameter cb / callback pada sebuah function / static instance =>  adalah return
+- jika ingin memanggil static lain kedalam static maka kita membutuhkan callback yang sama di parameter static yang ingin dipanggil
+- 
+

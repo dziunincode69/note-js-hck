@@ -8,7 +8,7 @@
 - Jika ingin merubah konten dalam array dengan map kita tidak perlu push ke temp tetapi kita hanya perlu me return
 - Includes hanya me return boolean dan hanya 1 data
 - filter me return array dan TIDAK bisa membuat return
-
+- Untuk push json dari hasil parse kita butuh mengembalikan dengan Stringify
 
 - row > baris ke bawah 
 - col > ke samping
