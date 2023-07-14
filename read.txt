@@ -6,7 +6,8 @@
 - Jika membuat class harus di module.exports agar bisa di pakai di file lain
 
 - Jika ingin merubah konten dalam array dengan map kita tidak perlu push ke temp tetapi kita hanya perlu me return
-- 
+- Includes hanya me return boolean dan hanya 1 data
+- filter me return array dan TIDAK bisa membuat return
 
 
 - row > baris ke bawah 

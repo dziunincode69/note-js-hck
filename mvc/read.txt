@@ -30,7 +30,7 @@
 - Require dalam controller ke models dan views
 - buat class baru jika ada kebutuhan lain selain class Model ( Tetapi buat di dalam file model.js) cth: EXAMPLECODE #1
 - kita bisa memanggil static pada class yang sama dengan menggunakan namaclass.namastatic cth: EXAMPLECODE #2
-
+- Pada file main hanya boleh memanggil dari controller
 
 - sync = harus menunggu proses selesai
 - async = tanpa harus menunggu proses selesai
