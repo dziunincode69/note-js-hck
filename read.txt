@@ -5,6 +5,7 @@
 - module.exports
 - Jika membuat class harus di module.exports agar bisa di pakai di file lain
 
+- Map bisa digunakan tanpa variable dan tanpa return
 - Jika ingin merubah konten dalam array dengan map kita tidak perlu push ke temp tetapi kita hanya perlu me return
 - Includes hanya me return boolean dan hanya 1 data
 - filter me return array dan TIDAK bisa membuat return

@@ -21,12 +21,19 @@
 - App -> Controller -> View
 
 ** NOTE **
+- instance method 
 - Jika require file lain maka nama variable awal harus kapital contoh: "Controller"
 - Jika ingin require ke tempat lain taro di atas Class	
 - Require dalam controller ke models dan views
 - buat class baru jika ada kebutuhan lain selain class Model ( Tetapi buat di dalam file model.js) cth: EXAMPLECODE #1
 - kita bisa memanggil static pada class yang sama dengan menggunakan namaclass.namastatic cth: EXAMPLECODE #2
 - Pada file main hanya boleh memanggil dari controller
+- this = mengacu pada nama class saat ini
+- jika ada param yang sama maka gunakan extend class ke parent
+- Super masuk kedalam constructor pada children #HINT 3
+
+- Super
+
 
 - sync = harus menunggu proses selesai
 - async = tanpa harus menunggu proses selesai

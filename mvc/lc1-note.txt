@@ -1,0 +1,46 @@
+The forEach method does not return a new array 
+
+
+
+ ** Merubah Object Object ke instance **
+    - buat variabel lalu map
+    - di dalam map lalu di instansiate dengan factory lalu di return
+
+    OTHER NOTES
+    - save JSON harus if else callback
+    - ADD menggunakan push data baru ke data lama (#1)
+    - DELETE bisa menggunakan FILTER
+
+    ** Save Private Property
+    - untuk save private property ke JSON wajib menggunakan toJSON ( TANPA PARAMETER ) DAN WAJIB di Return #PSEUDO toJSON
+    - toJSON di save didalam class BUKAN didalam Factory 
+
+
+
+#PSEUDO toJSON 
+Class Customer
+Define the function toJSON
+    return and curly brackets 
+        Set the attribute "email" with this.name
+        Set the attribute "password" with this.password
+    end curly brackets
+End function
+end Class
+
+
+#PSEUDO ADD (#1)
+- instantsiate
+- push hasil instantsiate 
+- save json 
+    - #MULTIDIMENSION array
+    - cari Index nya dengan FIND ( angka array )
+    - push nilai baru 
+    - save json
+
+#PSEUDO DELETE 
+- lalu filter dengan FILTER 
+- reasign hasil filter
+    - #MULTIDIMENSION array
+    - cari Index nya dengan FIND ( angka array )
+    - lalu filter dengan FILTER ke variabel hasil Find nya
+    - reasign hasil nya dengan variabel find
