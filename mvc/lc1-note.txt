@@ -1,4 +1,6 @@
-The forEach method does not return a new array 
+ NOTE:
+ - The forEach method does not return a new array
+ - JANGAN LUPA RETURN DI FACTORY
 
 
 
@@ -14,7 +16,6 @@ The forEach method does not return a new array
     ** Save Private Property
     - untuk save private property ke JSON wajib menggunakan toJSON ( TANPA PARAMETER ) DAN WAJIB di Return #PSEUDO toJSON
     - toJSON di save didalam class BUKAN didalam Factory 
-
 
 
 #PSEUDO toJSON 
