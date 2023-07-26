@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/70366238/join-postgres-table-that-has-two-common-columns-of-another-table JOIN

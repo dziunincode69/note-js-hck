@@ -1,0 +1,86 @@
+#CODE1: 
+SELECT "Categories"."categoriesName" AS category, 
+SUM("Menus"."stock") AS total_stock, 
+SUM("Menus"."stock" * "Menus"."price") AS total_sales
+FROM "Menus"
+JOIN "Categories" ON "Menus"."category" = "Categories"."id"
+GROUP BY "Categories"."categoriesName"
+HAVING SUM("Menus"."stock" * "Menus"."price") > 3000000
+ORDER BY total_sales DESC
+┌─────────┬────────────────┬────────────┬────────────┐
+│ (index) │    category    │ totalStock │ totalSales │
+├─────────┼────────────────┼────────────┼────────────┤
+│    0    │    'Burger'    │   '345'    │ '10470000' │
+│    1    │ 'Paket Family' │    '95'    │ '10040000' │
+│    2    │    'Snack'     │   '225'    │ '3915000'  │
+└─────────┴────────────────┴────────────┴────────────┘
+
+#CODE2:
+SELECT *, "Categories"."categoriesName" AS category, "Menus"."stock"
+FROM "Menus"
+JOIN "Categories" ON "Menus"."category" = "Categories"."id"
+WHERE "Menus"."createdAt" BETWEEN '2021-06-02' AND '2021-07-09'
+ORDER BY "Menus"."stock" DESC
+LIMIT 1;
+┌─────────┬────────────────────────────────┬────────┬───────┬────────────────┬──────────────────────────┐
+│ (index) │              name              │ price  │ stock │    category    │        createdAt         │
+├─────────┼────────────────────────────────┼────────┼───────┼────────────────┼──────────────────────────┤
+│    0    │ 'Family Weekend Berempat Ayam' │ 144000 │  55   │ 'Paket Family' │ 2021-07-02T17:00:00.000Z │
+└─────────┴────────────────────────────────┴────────┴───────┴────────────────┴──────────────────────────┘
+
+
+#CODE3: 
+SELECT *, "Categories"."categoriesName" AS category
+FROM "Menus"
+JOIN "Categories" ON "Menus"."category" = "Categories"."id"
+WHERE ("Menus"."name" LIKE '%Burger%' OR "Menus"."name" LIKE '%burger%)
+┌─────────┬─────────────────────────────┬───────┬───────┬──────────┬──────────────────────────┐
+│ (index) │            name             │ price │ stock │ category │        createdAt         │
+├─────────┼─────────────────────────────┼───────┼───────┼──────────┼──────────────────────────┤
+│    0    │        'Big Burger'         │ 36000 │  55   │ 'Burger' │ 2021-03-02T17:00:00.000Z │
+│    1    │    'Cheeseburger Deluxe'    │ 27500 │  45   │ 'Burger' │ 2021-08-02T17:00:00.000Z │
+│    2    │       'Cheeseburger'        │ 28500 │  40   │ 'Burger' │ 2021-08-02T17:00:00.000Z │
+│    3    │        'Beef Burger'        │ 23000 │  50   │ 'Burger' │ 2021-03-02T17:00:00.000Z │
+│    4    │     'Fish Filet Burger'     │ 27500 │  25   │ 'Burger' │ 2021-07-02T17:00:00.000Z │
+│    5    │       'Spicy Burger'        │ 36000 │  45   │ 'Burger' │ 2021-07-02T17:00:00.000Z │
+│    6    │ 'Triple Burger With Cheese' │ 37000 │  50   │ 'Burger' │ 2021-03-02T17:00:00.000Z │
+└─────────┴─────────────────────────────┴───────┴───────┴──────────┴──────────────────────────┘
+
+#CODE4: 
+SELECT *
+FROM "Menus"
+WHERE "stock" = (
+SELECT MAX("stock") 
+FROM "Menus"
+);
+┌─────────┬────────────────────────────────┬────────┬───────┬──────────┬──────────────────────────┐
+│ (index) │              name              │ price  │ stock │ category │        createdAt         │
+├─────────┼────────────────────────────────┼────────┼───────┼──────────┼──────────────────────────┤
+│    0    │          'Big Burger'          │ 36000  │  55   │    1     │ 2021-03-02T17:00:00.000Z │
+│    1    │ 'Family Weekend Berempat Ayam' │ 144000 │  55   │    5     │ 2021-07-02T17:00:00.000Z │
+└─────────┴────────────────────────────────┴────────┴───────┴──────────┴──────────────────────────┘
+
+
+
+
+#CODE5:
+SELECT *
+FROM "Menus"
+JOIN "Categories" ON "Menus"."category" = "Categories"."id"
+WHERE "Categories"."categoriesName" = 'Drink' 
+AND date_part('month', "Menus"."createdAt" ) >= 5 
+AND date_part('month', "Menus"."createdAt" ) <= 6
+AND date_part('year', "Menus"."createdAt" ) = 2021
+|| another solustion ||
+SELECT *
+FROM "Menus"
+JOIN "Categories" ON "Menus"."category" = "Categories"."id"
+WHERE ("Categories"."categoriesName" = 'Drink' AND "Menus"."createdAt" BETWEEN '2021-05-01' AND '2021-06-30' )
+
+
+┌─────────┬──────────────┬───────┬───────┬──────────┬──────────────────────────┐
+│ (index) │     name     │ price │ stock │ category │        createdAt         │
+├─────────┼──────────────┼───────┼───────┼──────────┼──────────────────────────┤
+│    0    │ 'Hot Coffee' │ 11000 │  20   │    3     │ 2021-06-02T17:00:00.000Z │
+│    1    │ 'Coca-Cola'  │ 13000 │  30   │    3     │ 2021-06-02T17:00:00.000Z │
+└─────────┴──────────────┴───────┴───────┴──────────┴──────────────────────────┘

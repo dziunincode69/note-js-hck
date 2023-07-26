@@ -1,0 +1,3 @@
+res.body = untuk post data
+res.query untuk parameter ex: /posts?search=asdasd
+res.params untuk path ex: /posts/id(param)/delete
